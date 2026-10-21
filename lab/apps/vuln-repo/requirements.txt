@@ -1,0 +1,2 @@
+# Dépendances du dépôt de test (Ch30)
+# Aucune dépendance externe requise pour l'exercice.

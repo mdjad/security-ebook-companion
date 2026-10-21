@@ -1,0 +1,33 @@
+# ─────────────────────────────────────────────────────────────
+#  WORDLIST — liste de mots de passe FICTIFS (Ch10, Ch15)
+#
+#  Petite liste de test pour hydra / john / hashcat.
+#  Contient les identifiants faibles volontairement posés sur les
+#  cibles du lab (admin123, toor, labo123, passA123, passB456).
+#
+#  NB : le fichier rockyou.txt complet (~130 Mo) n'est pas redistribué
+#  ici ; sur Kali il se trouve dans /usr/share/wordlists/rockyou.txt
+#  (décompresser rockyou.txt.gz). Cette liste réduite suffit aux
+#  exercices du livre.
+# ─────────────────────────────────────────────────────────────
+admin
+admin123
+password
+123456
+toor
+root
+labo123
+passA123
+passB456
+letmein
+welcome
+qwerty
+iloveyou
+monkey
+dragon
+sunshine
+princess
+football
+shadow
+superman
+michael

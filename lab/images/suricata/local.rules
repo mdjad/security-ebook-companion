@@ -1,0 +1,16 @@
+# ─────────────────────────────────────────────────────────────
+#  Règles de test du laboratoire (Ch21 Ex2)
+#
+#  SIDs 9000001+ : plage réservée aux règles locales (jamais de
+#  collision avec les règles ET/Open). Alertes déterministes pour
+#  la validation : HTTP vers vuln-api, ping ICMP, connexion SSH.
+# ─────────────────────────────────────────────────────────────
+
+# HTTP : toute requête contenant « vuln-api » (Host header du curl)
+alert tcp any any -> any any (msg:"LAB HTTP test vers vuln-api"; content:"vuln-api"; sid:9000001; rev:1;)
+
+# ICMP : tout ping (trafic de test généré par le script)
+alert icmp any any -> any any (msg:"LAB ICMP ping"; sid:9000002; rev:1;)
+
+# SSH : toute connexion TCP vers le port 22 (nc / ssh vers vuln-host)
+alert tcp any any -> any 22 (msg:"LAB connexion SSH"; flow:to_server; sid:9000003; rev:1;)

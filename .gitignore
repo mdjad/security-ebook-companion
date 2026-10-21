@@ -1,0 +1,12 @@
+# Local settings and credentials. Keep the safe example file versioned.
+/lab/.env
+/lab/**/.env
+/lab/.env.*
+/lab/**/.env.*
+!/lab/.env.example
+!/lab/**/.env.example
+
+# Local operating-system and Python artifacts
+.DS_Store
+__pycache__/
+*.py[cod]

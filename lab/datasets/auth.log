@@ -1,0 +1,56 @@
+# ─────────────────────────────────────────────────────────────
+#  AUTH.LOG — journal d'authentification SYNTHÉTIQUE (Ch06, Ch09)
+#
+#  Format Debian/Ubuntu (auth.log). Données 100 % fictives.
+#  Utilisé par :
+#    - Ch06 Ex1 : comptage des échecs SSH
+#    - Ch09 Ex1 : top 10 des sources de brute force
+#    - Ch09 Ex2 : analyseur Python (connexions acceptées)
+#
+#  NB : la colonne de l'IP varie selon la distribution (le chapitre
+#  le signale) ; ce fichier suit le format Debian (IP en position
+#  NF-3 pour les lignes d'échec d'authentification).
+# ─────────────────────────────────────────────────────────────
+Aug 11 08:00:01 labo sshd[1001]: Server listening on 0.0.0.0 port 22.
+Aug 11 08:00:02 labo sshd[1001]: Server listening on :: port 22.
+Aug 11 08:01:10 labo sshd[1002]: Failed password for invalid user root from 203.0.113.10 port 40001 ssh2
+Aug 11 08:01:15 labo sshd[1003]: Failed password for invalid user admin from 203.0.113.10 port 40002 ssh2
+Aug 11 08:01:20 labo sshd[1004]: Failed password for invalid user root from 203.0.113.10 port 40003 ssh2
+Aug 11 08:02:05 labo sshd[1005]: Failed password for invalid user admin from 198.51.100.7 port 50001 ssh2
+Aug 11 08:02:10 labo sshd[1006]: Failed password for invalid user root from 198.51.100.7 port 50002 ssh2
+Aug 11 08:03:00 labo sshd[1007]: Failed password for invalid user admin from 203.0.113.10 port 40004 ssh2
+Aug 11 08:03:30 labo sshd[1008]: Failed password for invalid user postgres from 192.0.2.99 port 60001 ssh2
+Aug 11 08:04:00 labo sshd[1009]: Failed password for invalid user admin from 198.51.100.7 port 50003 ssh2
+Aug 11 08:05:00 labo sshd[1010]: Accepted password for admin from 192.168.56.10 port 51235 ssh2
+Aug 11 08:05:01 labo sshd[1011]: session opened for user admin by (uid=0)
+Aug 11 08:06:00 labo sshd[1012]: Failed password for invalid user root from 203.0.113.10 port 40005 ssh2
+Aug 11 08:06:30 labo sshd[1013]: Failed password for invalid user admin from 198.51.100.7 port 50004 ssh2
+Aug 11 08:07:00 labo sshd[1014]: Failed password for invalid user oracle from 192.0.2.99 port 60002 ssh2
+Aug 11 08:08:00 labo sshd[1015]: Failed password for invalid user admin from 203.0.113.10 port 40006 ssh2
+Aug 11 08:09:00 labo sshd[1016]: Failed password for invalid user root from 198.51.100.7 port 50005 ssh2
+Aug 11 08:10:00 labo sshd[1017]: Accepted password for admin from 192.168.56.10 port 51236 ssh2
+Aug 11 08:10:01 labo sshd[1018]: session opened for user admin by (uid=0)
+Aug 11 08:11:00 labo sshd[1019]: Failed password for invalid user admin from 203.0.113.10 port 40007 ssh2
+Aug 11 08:12:00 labo sshd[1020]: Failed password for invalid user root from 192.0.2.99 port 60003 ssh2
+Aug 11 08:13:00 labo sshd[1021]: Failed password for invalid user admin from 198.51.100.7 port 50006 ssh2
+Aug 11 08:14:00 labo sshd[1022]: Failed password for invalid user admin from 203.0.113.10 port 40008 ssh2
+Aug 11 08:15:00 labo sshd[1023]: Accepted password for admin from 192.168.56.10 port 51237 ssh2
+Aug 11 08:15:01 labo sshd[1024]: session opened for user admin by (uid=0)
+Aug 11 08:16:00 labo sshd[1025]: Failed password for invalid user admin from 198.51.100.7 port 50007 ssh2
+Aug 11 08:17:00 labo sshd[1026]: Failed password for invalid user root from 203.0.113.10 port 40009 ssh2
+Aug 11 08:18:00 labo sshd[1027]: Failed password for invalid user admin from 192.0.2.99 port 60004 ssh2
+Aug 11 08:19:00 labo sshd[1028]: Failed password for invalid user admin from 203.0.113.10 port 40010 ssh2
+Aug 11 08:20:00 labo sshd[1029]: Accepted password for admin from 192.168.56.10 port 51238 ssh2
+Aug 11 08:20:01 labo sshd[1030]: session opened for user admin by (uid=0)
+Aug 11 08:21:00 labo sshd[1031]: Failed password for invalid user root from 198.51.100.7 port 50008 ssh2
+Aug 11 08:22:00 labo sshd[1032]: Failed password for invalid user admin from 203.0.113.10 port 40011 ssh2
+Aug 11 08:23:00 labo sshd[1033]: Failed password for invalid user admin from 198.51.100.7 port 50009 ssh2
+Aug 11 08:24:00 labo sshd[1034]: Failed password for invalid user root from 203.0.113.10 port 40012 ssh2
+Aug 11 08:25:00 labo sshd[1035]: Accepted password for admin from 192.168.56.10 port 51239 ssh2
+Aug 11 08:25:01 labo sshd[1036]: session opened for user admin by (uid=0)
+Aug 11 08:26:00 labo sshd[1037]: Failed password for invalid user admin from 198.51.100.7 port 50010 ssh2
+Aug 11 08:27:00 labo sshd[1038]: Failed password for invalid user root from 192.0.2.99 port 60005 ssh2
+Aug 11 08:28:00 labo sshd[1039]: Failed password for invalid user admin from 203.0.113.10 port 40013 ssh2
+Aug 11 08:29:00 labo sshd[1040]: Failed password for invalid user admin from 198.51.100.7 port 50011 ssh2
+Aug 11 08:30:00 labo sshd[1041]: Accepted password for admin from 192.168.56.10 port 51240 ssh2
+Aug 11 08:30:01 labo sshd[1042]: session opened for user admin by (uid=0)

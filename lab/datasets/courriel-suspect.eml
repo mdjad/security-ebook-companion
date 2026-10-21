@@ -1,0 +1,32 @@
+# ─────────────────────────────────────────────────────────────
+#  COURRIEL-SUSPECT.EML — courriel de phishing SYNTHÉTIQUE (Ch23 Ex1)
+#
+#  Données 100 % fictives (société « Alpha Services » fictive).
+#  Objectif pédagogique : l'analyse des en-têtes révèle l'origine
+#  réelle (Return-Path ≠ domaine affiché, relais tiers dans Received)
+#  et le contenu exerce une pression (urgence, changement de RIB).
+#  Utilisé par : Ch23 Ex1 (analyse défensive d'un courriel suspect).
+# ─────────────────────────────────────────────────────────────
+Return-Path: <bounce@mailer-alpha.example>
+From: "Alpha Services" <facturation@alpha-services.example>
+Reply-To: <paiement@alpha-services.example>
+To: finance@entreprise-fictive.example
+Subject: URGENT : changement de RIB
+Date: Mon, 11 Aug 2026 09:15:00 +0200
+Message-ID: <20260811091500.7f3a@mailer-alpha.example>
+Received: from mail.alpha-services.example (203.0.113.77)
+        by mx.entreprise-fictive.example with ESMTP id 9f2c1
+Received: from smtp.mailer-alpha.example (198.51.100.42)
+        by mail.alpha-services.example with ESMTP id 4b8d7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Bonjour,
+
+Notre RIB a change. Merci de mettre a jour le prochain virement vers
+le compte ci-joint avant la fin de la journee.
+
+Urgent.
+
+Cordialement,
+Le service comptabilite

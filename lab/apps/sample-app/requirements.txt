@@ -1,0 +1,2 @@
+# Dépendances de l'application de test (Ch29-30)
+# Aucune dépendance externe : serveur HTTP de la bibliothèque standard.

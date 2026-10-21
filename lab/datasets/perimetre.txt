@@ -1,0 +1,25 @@
+# ─────────────────────────────────────────────────────────────
+#  PERIMETRE — fichier de périmètre d'un test d'intrusion (Ch14)
+#
+#  Exemple de périmètre autorisé (fictif). Le cadre d'engagement
+#  doit être signé AVANT tout test (cf. « Rappel légal »).
+# ─────────────────────────────────────────────────────────────
+# Périmètre autorisé — test d'intrusion (exercice pédagogique)
+# Client fictif : LaboCorp (environnement de staging uniquement)
+
+[Périmètre]
+- Réseau : 10.20.0.10-15 (segment de staging)
+- Hôtes  : staging-app.example.com, staging-db.example.com
+- Ports  : 22, 80, 443, 3306
+
+[Exclusions]
+- 10.20.0.1 (passerelle, hors périmètre)
+- Toute infrastructure de production
+
+[Règles]
+- Tests destructifs interdits sur staging (PoC non destructif uniquement)
+- Seuil de tentatives : 5 par compte (anti-brute-force)
+- Contact d'urgence : soc@labocorp.example (24/7)
+
+[Horaires]
+- Fenêtre autorisée : 08:00 - 20:00 (heure locale)

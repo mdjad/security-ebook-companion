@@ -1,0 +1,45 @@
+# ─────────────────────────────────────────────────────────────
+#  VULN-REPO — pipeline DevSecOps (Ch30 Ex2)
+#  Reprend le workflow du chapitre : SAST, secrets (bloquant),
+#  tests, build, scan d'image, SBOM + signature.
+#  NB : `sign-artifact` est conceptuel (le chapitre le signale).
+# ─────────────────────────────────────────────────────────────
+name: labo-ci
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  workflow_dispatch: {}
+
+jobs:
+  securite-et-tests:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    env:
+      MA_CLE_API: ${{ secrets.CLE_API_COFFRE }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: SAST
+        run: semgrep scan --config=auto . --json -o sast.json || true
+
+      - name: Secrets (bloquant)
+        run: gitleaks detect --source . --redact
+
+      - name: Tests
+        run: make test
+
+      - name: Build
+        run: docker build -t app-lab:ci .
+
+      - name: Scan image
+        run: trivy image --severity HIGH,CRITICAL app-lab:ci || true
+
+      - name: SBOM + signature (concept)
+        run: |
+          syft packages app-lab:ci -o cyclonedx-json > sbom.json
+          sign-artifact app-lab:ci
